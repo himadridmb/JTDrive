@@ -6,6 +6,7 @@ package singleton;
 
 public class BillPughSingleton {
 	private BillPughSingleton() {
+		System.out.println("Bill pugh singleton");
 	}
 
 	private static class LazyHolder {
