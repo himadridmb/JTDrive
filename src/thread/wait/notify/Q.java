@@ -7,7 +7,7 @@ class Q {
 	synchronized int get() {
 		if (!valueSet)
 			try {
-				wait(2000);
+				wait();
 			} catch (InterruptedException e) {
 				System.out.println("InterruptedException caught");
 			}
@@ -20,7 +20,7 @@ class Q {
 	synchronized void put(int n) {
 		if (valueSet)
 			try {
-				wait(2000);
+				wait();
 			} catch (InterruptedException e) {
 				System.out.println("InterruptedException caught");
 			}
