@@ -13,7 +13,7 @@ public class DELink {
 	}
 
 	public int getValue() {
-		return value;
+		return this.value;
 	}
 
 	public void setValue(int value) {
@@ -36,6 +36,11 @@ public class DELink {
 		this.previous = previous;
 	}
 
+	public void displayLink() // display this link 
+	{ 
+		System.out.print(this.value + " "); 
+	}
+	
 	@Override
 	public String toString() {
 		return "DELink [value=" + value + "]";

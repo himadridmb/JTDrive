@@ -101,4 +101,18 @@ public class LinkList {
 			current = current.getNext();
 		}
 	}
+
+	public Link getFirst() {
+		return first;
+	}
+
+	public void setFirst(Link first) {
+		this.first = first;
+	}
+	
+	public ListIterator getIterator() // return iterator
+	{
+		return new ListIterator(this); // initialized with 
+	}// this list
+
 }

@@ -35,7 +35,8 @@ public class Link {
 	public void setNext(Link next) {
 		this.next = next;
 	}
-
+	
+	
 	public void displayLink() // display ourself
 	{
 		System.out.print("{" + key + ", " + value + "}");
