@@ -13,4 +13,9 @@ public class TestApp1 {
 		Assert.assertEquals("abc", "abc");
  
 	}
+	
+	public void swapTest()
+	{
+		
+	}
 }

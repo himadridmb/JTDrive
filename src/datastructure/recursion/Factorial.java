@@ -8,6 +8,7 @@ public class Factorial {
 		if (n == 0) {
 			return 1;
 		} else {
+			System.out.println(n);
 			return n * doFactorial(n - 1);
 		}
 	}
@@ -29,7 +30,7 @@ public class Factorial {
 		long res = fc.doFactorial(20);
 		System.out.println(res);
 
-		int Total = fc.triangle(5);
-		System.out.println(Total);
+		//int Total = fc.triangle(5);
+		//System.out.println(Total);
 	}
 }
