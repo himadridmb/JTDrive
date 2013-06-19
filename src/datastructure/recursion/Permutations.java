@@ -4,7 +4,7 @@ public class Permutations {
 
 	public void doPermute(char input[], int k, int n)
 	{
-		if(k==n)
+		if(k==n-1)
 		{
 			for(int i = 0; i<n ; ++i)
 			{
@@ -20,11 +20,11 @@ public class Permutations {
 				input[k] = input[i];
 				input[i] = t;
 				
-				System.out.println(String.format("Before k=%d,i=%d", k,i));
+			//	System.out.println(String.format("Before k=%d,i=%d", k,i));
 				
 				doPermute(input,k+1,n);
 				
-				System.out.println(String.format("After k=%d,i=%d", k,i));
+			//	System.out.println(String.format("After k=%d,i=%d", k,i));
 				
 				t = input[k];
 				input[k] = input[i];
@@ -34,7 +34,7 @@ public class Permutations {
 	}
 	
 	public static void main(String[] args) {
-		new Permutations().doPermute(new char[]{'A','B','C'}, 0, 3);
+		new Permutations().doPermute(new char[]{'A','B','C','D'}, 0, 4);
 	}
 
 }
