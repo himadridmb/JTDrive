@@ -1,6 +1,10 @@
 package threadsafe.test.normal;
 
 /*
+ * Race conditions occur only if multiple resources are accessing the same resource, and one or more 
+ * of the threads write to the resource. If multiple threads read the same resource race conditions do not occur.
+ * 
+ * 
  * There are basically three approaches you can take to make an object such as RGBThread thread-safe:
  * 	1. Synchronize critical sections
  * 	2. Make it immutable
