@@ -5,6 +5,7 @@ package generics;
  * For example, say you want to write a method that works on List<Integer>, List<Double>, 
  * and List<Number>; you can achieve this by using an upper bounded wildcard.
  */
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,7 +37,28 @@ public class UpperBoundedWildCard {
 		String[] abc = new String[]{"a","b","c"};
 		
 		test(abc);
+		
+		
+		/*
+		List<B> lb = new ArrayList<B>();
+		List<A> la = lb;
+		
+		Although Integer is a subtype of Number, List<Integer> is not a subtype of List<Number> and, 
+		in fact, these two types are not related. The common parent of List<Number> and List<Integer> is List<?>.
+		*/
+		
+		List<? extends B> lb = new ArrayList<B>();
+		List<? extends A> la = lb;
 
 	}
 
 }
+
+class A
+{
+}
+
+class B extends A
+{
+}
+
